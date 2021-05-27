@@ -1,0 +1,71 @@
+// Mixins
+@import '../utilities/mixins';
+
+#contenedorFlex { //De pag_b_localidad (todas)
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .contenedorFlex__filtros__ul--border {
+        @include border-default (2px, solid, $azul, 5px);
+        margin: 15px; padding: 10px;
+        .filtros__li--titulo {
+            @include border-default (1px, solid, $azul, 5px);
+            padding: 2px;
+            margin: 2px 0px 5px 0px;
+        }
+        a {
+            color: $azul;
+            text-decoration: none;
+        }
+    }
+}
+
+#displayGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3%;
+    .animal {
+        align-self: start;
+        @include border-default (1px, solid, black, 3px);
+        ul {
+            padding: 10px; margin: 0px 15px;
+        }
+
+        @each $animal in gato, perros, conejo, caballo{
+            .img-#{$animal} {
+                width: 100.05%;
+                height: 200px;
+                background-image: url('../../assets/#{$animal}.jpg');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+        div {
+            transition: all 1s;
+        }
+        div:hover {
+            transform: scale(1.5,1.5);
+        }
+    }
+}
+
+#derechos {
+    position: fixed;
+    bottom: 8%;
+    left: 1%;
+    #animacion {
+        animation-name: desarrollador;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        animation-duration: 3s;
+        animation-delay: 0s;
+    }
+}
+
+// Animaciones
+@keyframes desarrollador {
+    0% {color: $azul;}
+    50% {color:black;}
+    100% {color: $azul;}
+}

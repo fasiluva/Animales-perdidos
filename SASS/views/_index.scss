@@ -1,0 +1,28 @@
+#seccion { //De Index.html
+    width: 65%;
+    .ul__li--disc { // EXCEPCION PARA EN INDEX.HTML
+        list-style-type: disc;
+    }
+    #seccion__h3--gradiente {
+        padding: 8px;
+        background-image: linear-gradient(to right, $purpura, transparent, transparent);
+        border-radius: 10px;
+    }
+    #seccion__h4--gradiente {
+        @extend #seccion__h3--gradiente;
+    }
+    #seccion__img { /* Video e imagen */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        flex: 1;
+    }
+    table {
+        .seccion__table--bg {
+            background-color: $purpura;} /* index > table */
+        th, td {
+            padding: 5px;
+        }
+    }
+}
+

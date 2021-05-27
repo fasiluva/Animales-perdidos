@@ -1,0 +1,93 @@
+// No olvidar iniciar el compilador:
+// cd C:\Users\Usuario\OneDrive\curso\Clase11-Sass
+// node-sass -w SASS -o CSS
+
+//------------------------------------------------------------------------
+
+// Imports
+
+@import 'reset';
+@import 'utilities/mixins';
+@import 'utilities/variables';
+@import 'views/index';
+@import 'views/pag_b_localidad';
+@import 'views/contacto';
+@import 'media';
+
+//------------------------------------------------------------------------
+
+body {
+    background-color: $purpura;
+    color: $azul; 
+    font-family: 'Montserrat', sans-serif;
+    .fondoNaranja {
+        background-color: $naranja;
+    }
+    .textoNegro { // Presente en table > index y footers
+        color: black;
+        text-decoration: none; // Para quitar el subrayado de los <a>
+    } 
+    li {
+        list-style-type: none;
+    }
+    header {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        align-items: center;
+        justify-items: end;
+        #header__h1 {
+            text-align: center;
+        }
+    }
+    section { // De todos los .html
+        width: 1250px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    footer { // De todos los .html
+        background-color: $azul;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        ul li a {
+            color: black;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .li-dropdown {
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            color: $naranja;
+        }
+        .dropdown { // Menu con submenu del footer
+            position: absolute;
+            bottom: 30px; 
+            display: none;
+            height: 100px; 
+            width: 130px;
+            background-color: $azul;
+            padding: 10px 10px 0px 10px;
+            a {
+                display: block;
+                text-decoration: none;    
+                color: black;
+            }
+        }
+        .li-dropdown:hover .dropdown {
+            display: block;
+        }
+        .footer__ul--center {
+            text-align: center;
+            .inline {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+// TIPOS DE DISPOSITIVOS

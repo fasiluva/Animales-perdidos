@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animales Perdidos | form_contacto.html</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="fondoNaranja">
+		<h1 id="header__h1">Animales perdidos</h1>
+			<div id="header__logo">
+				<img src="assets/Logo.png" alt="Logo de Animales Perdidos" width="130px" height="130px">
+			</div>
+	</header>
+
+    <section class="fondoNaranja" id="seccionForm">
+        <form method="POST">
+            <fieldset style="padding: 1%;">
+                <legend style="font-size: 130%; font-weight: bold;">Datos para contactar</legend>
+                <label for="email">Email: </label>
+                <input type="email" class="input" name="email" placeholder="SuEmail@email.com">
+                <label for="password">Contraseña: </label>
+                <input type="password" class="input" name="password">
+                <select name="Localidad">
+                    <option value="VillaRamallo">Villa Ramallo</option>
+                    <option value="SanNicolas">San Nicolas</option>
+                    <option value="Sanchez">Sanchez</option>
+                    <option value="PerezMillan">Perez Millan</option>
+                </select><br><br><br>
+
+                <label for="razones"><h4>¿Por qué desea contactar con nosotros?:</h4></label>
+                <input type="checkbox" name="unirse" value="1">
+                <label for="unirse">Deseo unirme al equipo de busqueda de animales</label> <br>
+                <input type="checkbox" name="queja">
+                <label for="queja">Tengo una queja </label><br>
+                <input type="checkbox" name="desarrollar">
+                <label for="desarrollar">Quiero unirme al equipo desarrollador del sitio Web</label><br><br>
+
+                <label for="comentario">Comentario: </label><br>
+                <textarea name="comentario" cols="50" rows="10"></textarea><br><br>
+
+                <input type="reset" value="Limpiar formulario" style="padding: 5px; ">
+                <input type="submit" value="Enviar" style="padding: 5px;">
+            </fieldset>
+            
+        </form>
+    </section>
+
+    <footer>
+		<ul class="footer__ul--center">
+			<li class="inline"><a href="index.html">Quienes somos</a></li>
+			<li class="inline"><a href="contacto.html" style="color: #EAAC8B; padding: 0px 10px;">Contacto</a></li>
+			<li style="color: black;" class="li-dropdown">Buscar animales
+				<div class="dropdown"><ul>
+					<li><a href="pag_b_localidad1.html">Villa Ramallo</a></li>
+					<li><a href="pag_b_localidad2.html">San Nicolas</a></li>
+					<li><a href="pag_b_localidad3.html">Sanchez</a></li>
+					<li style="height: 100px;"><a href="pag_b_localidad4.html"></a>Perez Millan</a></li>
+				</ul></div></li>
+		</ul>
+	</footer>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 1px;
+  line-height: 130%;
+  text-align: justify; }
+
+#seccion {
+  width: 65%; }
+  #seccion .ul__li--disc {
+    list-style-type: disc; }
+  #seccion #seccion__h3--gradiente, #seccion #seccion__h4--gradiente {
+    padding: 8px;
+    background-image: linear-gradient(to right, #D19FA9, transparent, transparent);
+    border-radius: 10px; }
+  #seccion #seccion__img {
+    /* Video e imagen */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex: 1; }
+  #seccion table {
+    /* index > table */ }
+    #seccion table .seccion__table--bg {
+      background-color: #D19FA9; }
+    #seccion table th, #seccion table td {
+      padding: 5px; }
+
+#contenedorFlex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+  #contenedorFlex .contenedorFlex__filtros__ul--border {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #355070;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 10px; }
+    #contenedorFlex .contenedorFlex__filtros__ul--border .filtros__li--titulo {
+      border-width: 1px;
+      border-style: solid;
+      border-color: #355070;
+      border-radius: 5px;
+      padding: 2px;
+      margin: 2px 0px 5px 0px; }
+    #contenedorFlex .contenedorFlex__filtros__ul--border a {
+      color: #355070;
+      text-decoration: none; }
+
+#displayGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 3%; }
+  #displayGrid .animal {
+    align-self: start;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 3px; }
+    #displayGrid .animal ul {
+      padding: 10px;
+      margin: 0px 15px; }
+    #displayGrid .animal .img-gato {
+      width: 100.05%;
+      height: 200px;
+      background-image: url("../../assets/gato.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
+    #displayGrid .animal .img-perros {
+      width: 100.05%;
+      height: 200px;
+      background-image: url("../../assets/perros.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
+    #displayGrid .animal .img-conejo {
+      width: 100.05%;
+      height: 200px;
+      background-image: url("../../assets/conejo.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
+    #displayGrid .animal .img-caballo {
+      width: 100.05%;
+      height: 200px;
+      background-image: url("../../assets/caballo.jpg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%; }
+    #displayGrid .animal div {
+      transition: all 1s; }
+    #displayGrid .animal div:hover {
+      transform: scale(1.5, 1.5); }
+
+#derechos {
+  position: fixed;
+  bottom: 8%;
+  left: 1%; }
+  #derechos #animacion {
+    animation-name: desarrollador;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+    animation-delay: 0s; }
+
+@keyframes desarrollador {
+  0% {
+    color: #355070; }
+  50% {
+    color: black; }
+  100% {
+    color: #355070; } }
+
+#contactos {
+  border: 1px solid black;
+  background-color: #EAAC8B;
+  width: 65%; }
+  #contactos .contacto {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 1%;
+    border: 1px solid black; }
+    #contactos .contacto .contacto__li--flexbox {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center; }
+      #contactos .contacto .contacto__li--flexbox .contacto__li__img {
+        width: 30px;
+        margin-right: 2%; }
+
+@media only screen and (max-width: 320px) {
+  * {
+    letter-spacing: 0px;
+    line-height: 130%;
+    text-align: justify; }
+  footer {
+    font-size: 70%; }
+  .dropdown {
+    bottom: 20px;
+    height: 70px;
+    width: auto; }
+  /*Index*/
+  #seccion {
+    width: 90%;
+    padding: 10px; }
+  section #imagenesPadre img {
+    padding-bottom: 5px;
+    width: 100%; }
+  section #imagenesPadre iframe {
+    width: 100%; }
+  table {
+    padding: 0;
+    margin: 0;
+    font-size: 60%; }
+  /*Contacto*/
+  #contactos {
+    padding: 10px;
+    display: block; }
+  .contacto {
+    display: block;
+    padding: 15px;
+    border-bottom: none; }
+  .contacto ul {
+    margin-bottom: 10px; }
+  .contacto p {
+    margin-bottom: 10px; }
+  .contacto img {
+    display: none; }
+  /*Pagina de busqueda*/
+  section .animal ul {
+    font-size: 90%;
+    padding: 5px;
+    margin: 0px 2px; }
+  #displayGrid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+    #displayGrid .animal {
+      margin-left: 10px;
+      width: auto;
+      height: 100%; }
+      #displayGrid .animal ul {
+        padding: 0;
+        margin: 0; }
+      #displayGrid .animal .img-gato {
+        width: 100%;
+        height: 100px; }
+      #displayGrid .animal .img-perros {
+        width: 100%;
+        height: 100px; }
+      #displayGrid .animal .img-caballo {
+        width: 100%;
+        height: 100px; }
+      #displayGrid .animal .img-conejo {
+        width: 100%;
+        height: 100px; }
+  #derechos {
+    display: none; }
+  /*Formulario*/
+  #seccionForm {
+    font-size: 70%;
+    padding: 3px;
+    width: 100px; }
+  #seccionForm .input {
+    width: 50%;
+    display: block;
+    padding: 0;
+    margin: 0; }
+  #seccionForm textarea {
+    width: 90%; } }
+
+@media only screen and (max-width: 600px) {
+  /*Index*/
+  footer {
+    padding: 10px; }
+  #seccion {
+    width: 90%; }
+  #imagenesPadre img {
+    width: 50%;
+    height: 50%;
+    padding-right: 2px; }
+  #imagenesPadre iframe {
+    width: 45%;
+    height: 45%; }
+  /*Contacto*/
+  #contactos {
+    width: 90%;
+    padding: 10px; }
+  .contacto {
+    margin: 0px; }
+  .contacto img {
+    display: none; }
+  /*Pagina de busqueda*/
+  #contenedorFlex {
+    display: block; }
+  #displayGrid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px 10px 10px 5px;
+    gap: 5px;
+    width: auto; }
+  #derechos {
+    display: none; }
+  /*Formulario*/
+  #seccionForm {
+    width: auto; }
+  #seccionForm select {
+    margin-top: 40px; } }
+
+@media only screen and (max-width: 1024px) {
+  /*Index*/
+  #seccion #imagenesPadre img {
+    padding-bottom: 10px; }
+  /*Contacto*/
+  #contactos {
+    width: 80%; }
+  .contacto div {
+    width: 200px; }
+  .contacto div img {
+    width: 100%;
+    height: 100px; }
+  /*Pagina de busqueda*/
+  #contenedorFlex {
+    display: block; }
+  #displayGrid {
+    display: grid;
+    grid-template-columns: 24.5% 24.5% 24.5% 24%;
+    padding: 10px 10px 10px 5px;
+    gap: 10px;
+    width: auto; }
+  #derechos {
+    display: none; }
+  /*Formulario*/
+  #seccionForm {
+    width: auto;
+    margin-bottom: 60px; }
+  #seccionForm select {
+    margin-top: 40px; } }
+
+body {
+  background-color: #D19FA9;
+  color: #355070;
+  font-family: 'Montserrat', sans-serif; }
+  body .fondoNaranja {
+    background-color: #EAAC8B; }
+  body .textoNegro {
+    color: black;
+    text-decoration: none; }
+  body li {
+    list-style-type: none; }
+  body header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: end; }
+    body header #header__h1 {
+      text-align: center; }
+  body section {
+    width: 1250px;
+    margin: 20px auto;
+    padding: 20px; }
+  body footer {
+    background-color: #355070;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    body footer ul li a {
+      color: black;
+      position: relative;
+      display: inline-block;
+      text-decoration: none; }
+    body footer .li-dropdown {
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      color: #EAAC8B; }
+    body footer .dropdown {
+      position: absolute;
+      bottom: 30px;
+      display: none;
+      height: 100px;
+      width: 130px;
+      background-color: #355070;
+      padding: 10px 10px 0px 10px; }
+      body footer .dropdown a {
+        display: block;
+        text-decoration: none;
+        color: black; }
+    body footer .li-dropdown:hover .dropdown {
+      display: block; }
+    body footer .footer__ul--center {
+      text-align: center; }
+      body footer .footer__ul--center .inline {
+        display: inline-block; }

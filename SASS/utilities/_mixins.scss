@@ -1,0 +1,7 @@
+// Mixins de bordes
+@mixin border-default ($grosor, $estilo, $color, $radio){
+    border-width: $grosor;
+    border-style: $estilo;
+    border-color: $color;
+    border-radius: $radio;
+}

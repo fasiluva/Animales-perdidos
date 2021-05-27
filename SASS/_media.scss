@@ -1,0 +1,182 @@
+
+@media only screen and (max-width: 320px) {
+    * {
+        letter-spacing: 0px;
+        line-height: 130%;
+        text-align: justify;
+    } 
+
+    footer {
+        font-size: 70%;
+    } .dropdown {
+        bottom: 20px; 
+        height: 70px; 
+        width: auto;}
+    
+    /*Index*/
+
+    #seccion {
+        width: 90%;
+        padding: 10px;}
+        
+     section #imagenesPadre img {
+        padding-bottom: 5px;
+        width: 100%;
+    } section #imagenesPadre iframe {width: 100%;}
+
+    table {
+        padding: 0;
+        margin: 0;
+        font-size: 60%;}
+
+    /*Contacto*/
+
+    #contactos {
+        padding: 10px;
+        display: block;}
+
+    .contacto {
+        display: block;
+        padding: 15px;
+        border-bottom: none;}
+
+    .contacto ul {margin-bottom: 10px;}
+    .contacto p {margin-bottom: 10px;}
+    .contacto img {display: none;}
+
+    /*Pagina de busqueda*/
+
+    section .animal ul{
+        font-size: 90%;
+        padding: 5px; margin: 0px 2px;}
+    
+    #displayGrid {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        .animal {
+            margin-left: 10px;
+            width: auto; height: 100%;
+            ul {
+                padding: 0;
+                margin: 0;
+            }
+            @each $animal in gato, perros, caballo, conejo {
+                .img-#{$animal} {
+                    width: 100%;
+                    height: 100px;
+                    
+                }
+            }
+        }
+    }
+
+    #derechos {
+        display: none;
+    }
+
+    /*Formulario*/
+
+    #seccionForm {
+        font-size: 70%;
+        padding: 3px;
+        width: 100px;} 
+    
+    #seccionForm .input {
+        width: 50%;
+        display: block;
+        padding: 0; margin: 0;}
+
+    #seccionForm textarea {width: 90%;}
+
+}
+
+@media only screen and (max-width:600px){
+    /*Index*/
+
+    footer {padding: 10px;}
+
+    #seccion {width: 90%;}
+
+    #imagenesPadre img {    
+        width: 50%;
+        height: 50%;
+        padding-right: 2px;
+    } #imagenesPadre iframe {
+        width: 45%;
+        height: 45%;}
+
+    /*Contacto*/
+    #contactos {
+        width: 90%;
+        padding: 10px;}
+
+    .contacto {margin: 0px;}.contacto img {display: none;}
+
+    /*Pagina de busqueda*/
+
+    #contenedorFlex {display: block;} 
+
+    #displayGrid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 10px 10px 10px 5px;
+        gap: 5px;
+        width: auto;}
+
+    #derechos {
+        display: none;
+    }
+
+    /*Formulario*/
+
+    #seccionForm {
+        width: auto;
+    } #seccionForm select {margin-top: 40px;}
+}
+
+@media only screen and (max-width:1024px){
+    
+    /*Index*/
+
+    #seccion #imagenesPadre img{
+        padding-bottom: 10px;
+    }
+
+    /*Contacto*/
+
+    #contactos {
+        width: 80%;
+    }
+
+    .contacto div{
+        width: 200px;
+    }
+    .contacto div img{
+        width: 100%;
+        height: 100px;
+    }
+
+    /*Pagina de busqueda*/
+
+    #contenedorFlex {display: block;} 
+
+    #displayGrid {
+        display: grid;
+        grid-template-columns: 24.5% 24.5% 24.5% 24%;
+        padding: 10px 10px 10px 5px;
+        gap: 10px;
+        width: auto;}
+    
+    #derechos {
+        display: none;
+    }
+
+    /*Formulario*/
+
+    #seccionForm {
+        width: auto;
+        margin-bottom: 60px;
+    } #seccionForm select {margin-top: 40px;}
+    
+}
