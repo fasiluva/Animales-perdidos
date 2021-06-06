@@ -31,8 +31,7 @@
         ul {
             padding: 10px; margin: 0px 15px;
         }
-
-        @each $animal in gato, perros, conejo, caballo{
+        @each $animal in gatos, perros, conejos, caballo{
             .img-#{$animal} {
                 width: 100.05%;
                 height: 200px;

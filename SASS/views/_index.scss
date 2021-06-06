@@ -9,8 +9,11 @@
         border-radius: 10px;
     }
     #seccion__h4--gradiente {
-        @extend #seccion__h3--gradiente;
+        padding: 8px;
+        background-image: linear-gradient(to right, $purpura, transparent, transparent);
+        border-radius: 10px;
     }
+
     #seccion__img { /* Video e imagen */
         display: flex;
         flex-wrap: wrap;

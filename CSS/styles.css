@@ -9,7 +9,11 @@
   width: 65%; }
   #seccion .ul__li--disc {
     list-style-type: disc; }
-  #seccion #seccion__h3--gradiente, #seccion #seccion__h4--gradiente {
+  #seccion #seccion__h3--gradiente {
+    padding: 8px;
+    background-image: linear-gradient(to right, #D19FA9, transparent, transparent);
+    border-radius: 10px; }
+  #seccion #seccion__h4--gradiente {
     padding: 8px;
     background-image: linear-gradient(to right, #D19FA9, transparent, transparent);
     border-radius: 10px; }
@@ -62,10 +66,10 @@
     #displayGrid .animal ul {
       padding: 10px;
       margin: 0px 15px; }
-    #displayGrid .animal .img-gato {
+    #displayGrid .animal .img-gatos {
       width: 100.05%;
       height: 200px;
-      background-image: url("../assets/gato.jpg");
+      background-image: url("../assets/gatos.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%; }
     #displayGrid .animal .img-perros {
@@ -74,10 +78,10 @@
       background-image: url("../assets/perros.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%; }
-    #displayGrid .animal .img-conejo {
+    #displayGrid .animal .img-conejos {
       width: 100.05%;
       height: 200px;
-      background-image: url("../assets/conejo.jpg");
+      background-image: url("../assets/conejos.jpg");
       background-repeat: no-repeat;
       background-size: 100% 100%; }
     #displayGrid .animal .img-caballo {
@@ -126,30 +130,35 @@
       display: flex;
       flex-flow: row nowrap;
       align-items: center; }
-      #contactos .contacto .contacto__li--flexbox .contacto__li__img {
-        width: 30px;
-        margin-right: 2%; }
+    #contactos .contacto .contacto__li__img {
+      width: 30px;
+      margin-right: 2%; }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 600px) {
   * {
     letter-spacing: 0px;
     line-height: 130%;
     text-align: justify; }
   footer {
-    font-size: 70%; }
-  .dropdown {
-    bottom: 20px;
-    height: 70px;
-    width: auto; }
+    font-size: 80%; }
+  footer .footer__ul--center .li-dropdown .dropdown {
+    bottom: 25px;
+    height: 80px; }
   /*Index*/
   #seccion {
     width: 90%;
     padding: 10px; }
-  section #imagenesPadre img {
+  section #seccion__img img {
     padding-bottom: 5px;
     width: 100%; }
-  section #imagenesPadre iframe {
+  section #seccion__img iframe {
     width: 100%; }
+  #seccion #seccion__h3--gradiente {
+    background-image: linear-gradient(to right, #D19FA9, transparent);
+    border-radius: 10px; }
+  #seccion #seccion__h4--gradiente {
+    background-image: linear-gradient(to right, #D19FA9, transparent);
+    border-radius: 10px; }
   table {
     padding: 0;
     margin: 0;
@@ -158,44 +167,40 @@
   #contactos {
     padding: 10px;
     display: block; }
-  .contacto {
+  #contactos .contacto ul li .contacto__li__img {
+    display: inline-block; }
+  #contactos .contacto ul li {
     display: block;
-    padding: 15px;
-    border-bottom: none; }
+    font-size: 90%; }
+  #contactos .contacto .contacto__img img {
+    display: none; }
   .contacto ul {
     margin-bottom: 10px; }
   .contacto p {
     margin-bottom: 10px; }
-  .contacto img {
-    display: none; }
   /*Pagina de busqueda*/
   section .animal ul {
     font-size: 90%;
     padding: 5px;
     margin: 0px 2px; }
-  #displayGrid {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center; }
-    #displayGrid .animal {
-      margin-left: 10px;
+  #contenedorFlex #displayGrid {
+    display: grid;
+    grid-template-columns: auto auto; }
+    #contenedorFlex #displayGrid .animal {
+      margin-left: 5px;
       width: auto;
       height: 100%; }
-      #displayGrid .animal ul {
-        padding: 0;
-        margin: 0; }
-      #displayGrid .animal .img-gato {
-        width: 100%;
-        height: 100px; }
-      #displayGrid .animal .img-perros {
-        width: 100%;
-        height: 100px; }
-      #displayGrid .animal .img-caballo {
-        width: 100%;
-        height: 100px; }
-      #displayGrid .animal .img-conejo {
-        width: 100%;
-        height: 100px; }
+      #contenedorFlex #displayGrid .animal ul {
+        padding: 5px 0px 0px 0px;
+        margin: 0px 0px 0px 5px; }
+      #contenedorFlex #displayGrid .animal .img-gato {
+        width: 100%; }
+      #contenedorFlex #displayGrid .animal .img-perros {
+        width: 100%; }
+      #contenedorFlex #displayGrid .animal .img-caballo {
+        width: 100%; }
+      #contenedorFlex #displayGrid .animal .img-conejo {
+        width: 100%; }
   #derechos {
     display: none; }
   /*Formulario*/
@@ -211,7 +216,7 @@
   #seccionForm textarea {
     width: 90%; } }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 601px) and (max-width: 1023px) {
   /*Index*/
   footer {
     padding: 10px; }
@@ -225,22 +230,30 @@
     width: 45%;
     height: 45%; }
   /*Contacto*/
-  #contactos {
-    width: 90%;
-    padding: 10px; }
+  #contactos .contacto ul li .contacto__li__img {
+    display: inline-block; }
+  #contactos .contacto ul li {
+    display: block;
+    font-size: 90%; }
+  #contactos .contacto .contacto__img img {
+    display: none; }
   .contacto {
     margin: 0px; }
-  .contacto img {
-    display: none; }
   /*Pagina de busqueda*/
-  #contenedorFlex {
-    display: block; }
-  #displayGrid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 10px 10px 10px 5px;
-    gap: 5px;
-    width: auto; }
+  section .animal ul {
+    font-size: 90%;
+    padding: 5px;
+    margin: 0px 2px; }
+  #contenedorFlex #displayGrid {
+    grid-template-columns: 300px 300px;
+    gap: 1%; }
+    #contenedorFlex #displayGrid .animal {
+      margin-left: 5px;
+      align-self: start;
+      width: 100%; }
+      #contenedorFlex #displayGrid .animal ul {
+        padding: 5px 0px 0px 0px;
+        margin: 0px 0px 0px 5px; }
   #derechos {
     display: none; }
   /*Formulario*/
@@ -249,25 +262,24 @@
   #seccionForm select {
     margin-top: 40px; } }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1600px) {
   /*Index*/
   #seccion #imagenesPadre img {
     padding-bottom: 10px; }
   /*Contacto*/
-  #contactos {
-    width: 80%; }
-  .contacto div {
-    width: 200px; }
-  .contacto div img {
-    width: 100%;
-    height: 100px; }
+  #contactos .contacto ul li {
+    display: block;
+    font-size: 90%; }
+  #contactos .contacto {
+    flex-flow: row nowrap;
+    justify-content: space-around; }
+  #contactos .contacto .contacto__img img {
+    width: 150px; }
   /*Pagina de busqueda*/
-  #contenedorFlex {
-    display: block; }
   #displayGrid {
     display: grid;
-    grid-template-columns: 24.5% 24.5% 24.5% 24%;
-    padding: 10px 10px 10px 5px;
+    grid-template-columns: auto auto auto auto;
+    padding: 20px;
     gap: 10px;
     width: auto; }
   #derechos {
