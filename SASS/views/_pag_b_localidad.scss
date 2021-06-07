@@ -33,7 +33,7 @@
         }
         @each $animal in gatos, perros, conejos, caballo{
             .img-#{$animal} {
-                width: 100.04%;
+                width: 100.05%;
                 height: 200px;
                 background-image: url('../assets/#{$animal}.jpg');
                 background-repeat: no-repeat;
